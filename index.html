@@ -1,0 +1,187 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<center>
+  <h3>CASE STUDY BETWEEN GOOGLE LENS AND MOBILENET</h3>
+ <h2>Google Lens
+    <sup><img src="download.png"></sup>
+ </h2>
+ <label>VS</label>
+ <br>
+ <h2 class="heading btn btn-primary" style="font-size: 25px;">Mobilenet</h2>
+ <br><hr><br>
+ <center>
+  <div class="test_image_and_result col-xs-12" style="background-color: rgb(101, 122, 122); margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+<p class="col-sm-4 col-xs-12" style="color: white; font-size: 20px; margin-right: 1300; "><b>1.) Test Image-</b></p>
+<img src="images.jpg" class="img_responsive" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+  <p class="col-sm-4 col-xs-12" style="background-color: white; width: 652; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Logitech MX Master 3 (Wireless Mouse)</b></span> </p>
+  <p class="col-sm-4 col-xs-12" style="background-color: white; width: 652; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Mouse, Computer Mouse</b></span></p>
+  <br><br><br><br><br><br>
+  <div class="mini_result" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+<hr style="color: white;">
+<label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+</div> 
+</div>
+</center>
+
+<center>
+ 
+<div class="test_image_and_result col-xs-12 1" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+  <p class="col-sm-4 col-xs-12 1" style="color: white; font-size: 20px; margin-right: 1300; "><b>2.) Test Image-</b></p>
+  <img src="laptop.jpg" class="img_responsive 1" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+    <p class="col-sm-4 col-xs-12 1" style="background-color: white; width: 650; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Dell Latitude 5500 (Laptop)</b></span></p>
+    <p class="col-sm-4 col-xs-12 1" style="background-color: white; width: 650; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Notebook, Notebook Computer</b></span></p>
+    <br><br><br><br><br><br>
+    <div class="mini_result 1" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+  <hr style="color: white;">
+  <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+  </div> 
+  </div>
+  </center>
+
+  <center>
+  
+<div class="test_image_and_result col-xs-12 2" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+  <p class="col-sm-4 col-xs-12 2" style="color: white; font-size: 20px; margin-right: 1300; "><b>3.) Test Image-</b></p>
+  <img src="car.jpg" class="img_responsive 2" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+    <p class="col-sm-4 col-xs-12 2" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Bugatti Broward</b></span></p>
+    <p class="col-sm-4 col-xs-12 2" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Sports Car, Sport Car</b></span></p>
+    <br><br><br><br><br><br>
+    <div class="mini_result 2" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+  <hr style="color: white;">
+  <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+  </div> 
+  </div>
+ </center>
+
+ <center>
+  
+  <div class="test_image_and_result col-xs-12 3" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+    <p class="col-sm-4 col-xs-12 3" style="color: white; font-size: 20px; margin-right: 1300; "><b>4.) Test Image-</b></p>
+    <img src="images (1).jpg" class="img_responsive 3" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+      <p class="col-sm-4 col-xs-12 3" style="background-color: white; width: 600; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Apple iPhone 12</b></span></p>
+      <p class="col-sm-4 col-xs-12 3" style="background-color: white; width: 600; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Loudspeaker, Cell Phone</b></span></p>
+      <br><br><br><br><br><br>
+      <div class="mini_result 3" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+    <hr style="color: white;">
+    <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+    </div> 
+    </div>
+   </center>
+
+   <center>
+  
+  <div class="test_image_and_result col-xs-12 4" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+    <p class="col-sm-4 col-xs-12 4" style="color: white; font-size: 20px; margin-right: 1300; "><b>5.) Test Image-</b></p>
+    <img src="pencil.jpg" class="img_responsive 4" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+      <p class="col-sm-4 col-xs-12 4" style="background-color: white; width: 650; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Graf von Faber-Castell Perfect Pencil</b></span></p>
+      <p class="col-sm-4 col-xs-12 4" style="background-color: white; width: 650; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Ball Point Pen</b></span></p>
+      <br><br><br><br><br><br>
+      <div class="mini_result 4" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+    <hr style="color: white;">
+    <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+    </div> 
+    </div>
+   </center>
+
+      <center>
+  
+  <div class="test_image_and_result col-xs-12 5" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+    <p class="col-sm-4 col-xs-12 5" style="color: white; font-size: 20px; margin-right: 1300; "><b>6.) Test Image-</b></p>
+    <img src="download.jpg" class="img_responsive 5" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+      <p class="col-sm-4 col-xs-12 5" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Pomeranian (Dog)</b></span></p>
+      <p class="col-sm-4 col-xs-12 5" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Hamster</b></span></p>
+      <br><br><br><br><br><br>
+      <div class="mini_result 5" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+    <hr style="color: white;">
+    <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+    </div> 
+    </div>
+   </center>
+
+      <center>
+  
+  <div class="test_image_and_result col-xs-12 6" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+    <p class="col-sm-4 col-xs-12 6" style="color: white; font-size: 20px; margin-right: 1300; "><b>7.) Test Image-</b></p>
+    <img src="download (1).jpg" class="img_responsive 6" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+      <p class="col-sm-4 col-xs-12 6" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Ziggle Florescent Paper</b></span></p>
+      <p class="col-sm-4 col-xs-12 6" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Notecase</b></span></p>
+      <br><br><br><br><br><br>
+      <div class="mini_result 6" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+    <hr style="color: white;">
+    <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+    </div> 
+    </div>
+   </center>
+
+      <center>
+  
+  <div class="test_image_and_result col-xs-12 7" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+    <p class="col-sm-4 col-xs-12 7" style="color: white; font-size: 20px; margin-right: 1300; "><b>8.) Test Image-</b></p>
+    <img src="images (2).jpg" class="img_responsive 7" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+      <p class="col-sm-4 col-xs-12 7" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Inesis Scotish Umbrella</b></span></p>
+      <p class="col-sm-4 col-xs-12 7" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Umbrella</b></span></p>
+      <br><br><br><br><br><br>
+      <div class="mini_result 7" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+    <hr style="color: white;">
+    <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+    </div> 
+    </div>
+   </center>
+
+      <center>
+  
+  <div class="test_image_and_result col-xs-12 8" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+    <p class="col-sm-4 col-xs-12 8" style="color: white; font-size: 20px; margin-right: 1300; "><b>9.) Test Image-</b></p>
+    <img src="download (3).jpg" class="img_responsive 8" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+      <p class="col-sm-4 col-xs-12 8" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Fujifilm instax mini 11</b></span></p>
+      <p class="col-sm-4 col-xs-12 8" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Electric Switch</b></span></p>
+      <br><br><br><br><br><br>
+      <div class="mini_result 8" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+    <hr style="color: white;">
+    <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+    </div> 
+    </div>
+   </center>
+
+    <center>
+  
+  <div class="test_image_and_result col-xs-12 9" style="background-color: rgb(101, 122, 122); margin-top: 30px; margin-left: 90px; width: 1500px; height: 700px; border-radius: 3%; box-shadow: 5px 5px 5px grey;">
+    <p class="col-sm-4 col-xs-12 9" style="color: white; font-size: 20px; margin-right: 1300; "><b>10.) Test Image-</b></p>
+    <img src="sharpener.jpg" class="img_responsive 9" style="width: 400px; height: 600px; border-radius: 5%; float: left; margin-left: 50px;">
+      <p class="col-sm-4 col-xs-12 9" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>GOOGLE LENS</b> - <span style="color: rgb(10, 139, 245);"><b>Blue Pencil Sharpener</b></span></p>
+      <p class="col-sm-4 col-xs-12 9" style="background-color: white; width: 550; height: 30px; margin-left: 30px; font-size: 20px; ">Output on <b>MOBILENET MODEL</b> - <span style="color: rgb(10, 139, 245);"><b>Pencil Sharpener</b></span></p>
+      <br><br><br><br><br><br>
+      <div class="mini_result 9" class="col-xs-4" style="color: white; font-size: 20px;"><h4><b>Result-</b></h4></p>
+    <hr style="color: white;">
+    <label style="color: white; font-size: 20px;">GOOGLE LENS Is More Accurate</label>
+    </div> 
+    </div>
+   </center>
+   <center>
+   <div class="test_image_and_result col-xs-12 9" style="background-color:rgb(255, 255, 255);margin-bottom: 100px; margin-top: 50px; margin-left: 90px; width: 1500px; height: 25px; box-shadow: 5px 5px 5px grey;">
+<p style="margin-bottom: 0px; color: black; font-size: 15px;"><b>I Have Tested 10 Images <b style="color: purple;">GOOGLE LENS</b> Have Predicted 10 Of Them More Accurately And <b style="color: purple;">MOBILENET</b> Was Less Accurately. So, According To My Case Study <b style="color: purple;">GOOGLE LENS</b> Is More Accurate.</p></div>
+</center>
+</center>
+
+<div class="copy_right_footer">
+  <b>Developed by - Arkan</b>
+  </div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
+
+
